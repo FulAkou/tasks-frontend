@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "apps/frontend/package.json",
+      "src": "frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
         "buildCommand": "npm run build",
@@ -17,7 +17,7 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "backend/src/api/index.ts"
+      "dest": "backend/api/server.ts"
     },
     {
       "src": "/(.*)",
